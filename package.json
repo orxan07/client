@@ -1,0 +1,30 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orxan07/client.git"
+  },
+  "dependencies": {
+    "angular": "^1.4.6",
+    "angular-resource": "^1.4.6",
+    "angular-ui-router": "^0.2.15",
+    "angularjs": "0.0.1",
+    "body-parser": "~1.4.3",
+    "bootstrap": "^3.3.5",
+    "express": "~4.6.1",
+    "jquery": "^2.1.4",
+    "method-override": "~2.1.1"
+  },
+  "author": "orxan@rehimli.info",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orxan07/client/issues"
+  },
+  "homepage": "https://github.com/orxan07/client#readme"
+}
