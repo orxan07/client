@@ -1,0 +1,22 @@
+<div ng-controller="demoCtrl as vm" ng-init="id">
+    <div class="col-md-12">
+        <br>
+    </div>
+
+    <div class="form-group">
+    <input class="form-control" type="text" ng-model="vm.formData.name">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-default" ng-click="vm.create()">Post</button>
+    </div>
+    <div class="form-group">
+    <input class="form-control" type="text" ng-model="id" placeholder="Input id">
+        </div>
+    <div class="form-group" >
+    <button type="submit" class="btn btn-default" ng-click="vm.delete(id)">Delete</button>
+    </div>
+
+    <div class="form-group">
+        <div ng-repeat="item in vm.users">Id: {{item._id}}<br> Name: {{item.name}}</div>
+    </div>
+</div>
