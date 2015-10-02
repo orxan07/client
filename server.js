@@ -1,14 +1,13 @@
 // set up ======================================================================
 var express  = require('express');
 var app      = express(); 								// create our app w/ express
-var port  	 = process.env.PORT || 1337; 				// set the port
+var port  	 = process.env.PORT || 3333; 				// set the port
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
 // configuration ===============================================================
 
 app.use(express.static(__dirname + '/public')); 		// set the static files location /public/img will be /img for users
-app.use('/scripts', express.static(__dirname + '/node_modules/'));
 app.use(bodyParser.urlencoded({'extended':'true'})); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json

@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM nginx
 MAINTAINER orxan@rehimli.info
 
 #RUN

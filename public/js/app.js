@@ -52,7 +52,7 @@
                 return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
             }];
 
-            var baseUrl = '/js/controllers';
+            var baseUrl = 'js/controllers';
 
             $urlRouterProvider.otherwise('/');
             $stateProvider

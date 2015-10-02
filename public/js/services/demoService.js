@@ -21,7 +21,7 @@
 
                 $http({
                     method: 'DELETE',
-                    url:'http://localhost:8080/api/users/'+ id,
+                    url:'http://localhost:3000/api/users/'+ id,
                 }).success(function (data, status, headers, cfg) {
                         deferred.resolve(data);
 
@@ -40,7 +40,7 @@
             var deferred = $q.defer();
                 $http({
                     method: 'POST',
-                    url: 'http://localhost:8080/api/users',
+                    url: 'http://localhost:3000/api/users',
                     data: obj,
                 }).success(function (data, status, headers, cfg) {
 
@@ -64,7 +64,7 @@
             var deferred = $q.defer();
             $http({
                 method: 'GET',
-                url: 'http://localhost:8080/api/users',
+                url: 'http://localhost:3000/api/users',
             }).success(function (data, status, headers, config) {
                 deferred.resolve(data);
 
