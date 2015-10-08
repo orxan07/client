@@ -21,5 +21,5 @@ RUN npm install
 
 
 # Open port and start nginx
-EXPOSE 8080
+EXPOSE 80
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
