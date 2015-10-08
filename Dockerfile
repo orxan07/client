@@ -6,8 +6,8 @@ RUN apt-get install -y curl
 
 # Copy angular files
 COPY . /usr/share/nginx
-COPY conf /etc/nginx/sites-enabled
-COPY conf /etc/nginx/sites-available
+COPY ./conf /etc/nginx/sites-enabled
+COPY ./conf /etc/nginx/sites-available
 
 # Installation
 RUN curl -sL https://deb.nodesource.com/setup | bash -
@@ -23,5 +23,5 @@ RUN npm install
 
 
 # Open port and start nginx
-EXPOSE 8888
+EXPOSE 80
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
