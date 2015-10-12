@@ -2,7 +2,7 @@ FROM nginx
 
 # Download packages
 RUN apt-get update
-RUN apt-get install -y curl nano
+RUN apt-get install -y curl vim
 
 # Copy angular files
 COPY . /usr/share/nginx
