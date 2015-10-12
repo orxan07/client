@@ -7,7 +7,7 @@ RUN apt-get install -y curl nano
 # Copy angular files
 COPY . /usr/share/nginx
 COPY ./conf /etc/nginx/sites-enabled/conf
-COPY ./conf /etc/nginx/sites-available/conf
+RUN ln -s /etc/nginx/sites-enabled/conf /etc/nginx/sites-available/conf
 
 # Installation
 RUN curl -sL https://deb.nodesource.com/setup | bash -
