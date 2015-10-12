@@ -6,8 +6,9 @@ RUN apt-get install -y curl vim
 
 # Copy angular files
 COPY . /usr/share/nginx
-COPY ./conf /etc/nginx/sites-enabled/conf
-RUN ln -s /etc/nginx/sites-enabled/conf /etc/nginx/sites-available/conf
+#COPY ./conf /etc/nginx/sites-enabled/conf
+RUN ln -s /etc/nginx/sites-enabled/conf ./conf
+RUN ln -s /etc/nginx/sites-available/conf ./conf
 
 # Installation
 RUN curl -sL https://deb.nodesource.com/setup | bash -
