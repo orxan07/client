@@ -7,6 +7,8 @@ RUN apt-get install -y curl vim
 # Copy angular files
 COPY . /usr/share/nginx
 #COPY ./conf /etc/nginx/sites-enabled/conf
+RUN touch /etc/nginx/sites-enabled/conf
+RUN touch /etc/nginx/sites-available/conf
 RUN ln -s  ./conf /etc/nginx/sites-enabled/conf
 RUN ln -s  ./conf /etc/nginx/sites-available/conf
 
