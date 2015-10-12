@@ -10,7 +10,7 @@ upstream nodejs {
   # IP mentioned here is the upstreams internal IP (and port), by default pointing
   # to docker IP accessing on node port
 
-    server 127.0.0.1:8000 max_fails=0 fail_timeout=10s weight=1;
+    server 172.17.42.1:8000 max_fails=0 fail_timeout=10s weight=1;
   # server 192.168.33.10:2001 max_fails=0 fail_timeout=10s weight=1;
   # server 192.168.33.10:2002 max_fails=0 fail_timeout=10s weight=1;
   # server 192.168.33.10:2003 max_fails=0 fail_timeout=10s weight=1;
@@ -25,7 +25,7 @@ upstream nodejs {
 
 server {
 	listen 80 default deferred;
-	server_name localhost;
+	server_name 172.17.42.1;
 	access_log /usr/share/nginx//access.log;
 	error_log /usr/share/nginx//error.log;
 
