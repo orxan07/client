@@ -1,4 +1,4 @@
-FROM smebberson/alpine-base:1.1.0
+FROM alpine:latest
 
 RUN apk add --update nginx=1.8.0-r1 && \
     rm -rf /var/cache/apk/* && \
