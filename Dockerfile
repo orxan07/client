@@ -1,5 +1,9 @@
-FROM smebberson/alpine-nginx:1.0.0
+FROM smebberson/alpine-base:1.1.0
 
+RUN apk add --update nginx=1.8.0-r1 && \
+    rm -rf /var/cache/apk/* && \
+    chown -R nginx:www-data /var/lib/nginx
+    
 RUN apk add --update nodejs=0.12.2-r0 git python make && \
     rm -rf /var/cache/apk/* && \
     npm install -g npm
