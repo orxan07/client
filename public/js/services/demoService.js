@@ -21,7 +21,7 @@
 
                 $http({
                     method: 'DELETE',
-                    url:'http://55.55.55.5/api/users/'+ id,
+                    url:'http://192.168.50.4/api/users/'+ id,
                 }).success(function (data, status, headers, cfg) {
                         deferred.resolve(data);
 
@@ -40,7 +40,7 @@
             var deferred = $q.defer();
                 $http({
                     method: 'POST',
-                    url: 'http://55.55.55.5/api/users',
+                    url: 'http://192.168.50.4/api/users',
                     data: obj,
                 }).success(function (data, status, headers, cfg) {
 
@@ -64,7 +64,7 @@
             var deferred = $q.defer();
             $http({
                 method: 'GET',
-                url: 'http://55.55.55.5/api/users',
+                url: 'http://192.168.50.4/api/users',
             }).success(function (data, status, headers, config) {
                 deferred.resolve(data);
 
